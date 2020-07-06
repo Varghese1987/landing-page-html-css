@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="stylew2.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+	<div class="cont1">
+		<div class="center">
+			<h1>Sign Up for Free</h1>
+			<form method="post">
+				<div class="txt_field">
+					<input type="text" placeholder="&ensp;Full Name" required>
+				</div>
+				<div class="txt_field">
+					<input type="text" placeholder="&ensp;Email" required>
+				</div>
+				<div class="txt_field">
+					<input type="text" placeholder="&ensp;Email" required>
+				</div>
+				<div class="txt_field">
+					<div class="select-box">
+						<div class="options-container"></div>
+						<div class="selected">Type</div>
+					</div>
+				</div>
+				<div class="txt_field1">
+					<input type="button" name="submit" value="Register" id="submitButton">
+				</div>
+			</form>
+		</div>
+		<div class="wrapper">
+			<div class="nav">
+				<div class="logo">
+					Landing
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Reviews</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Get Started</a></li>
+					</ul>
+				</div>			
+			</div>
+		</div>
+		<div class="content">
+			<header>Fly makes you faster</header>
+			<p>New free template by <a href="#">uicookies.com</a>. For more templates visit the <a href="#">site</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<input type="button" name="submit" value="SEE PRICING" id="submitButton">
+		</div>
+	</div>
+	<div class="cont2"></div>
+	<script>
+		const selected = document.querySelector(".selected");
+		const optionsContainer = document.querySelector(".options-container");
+		const optionsList = document.querySelectorAll(".option");
+		selected.addEventListener("click", () => 
+			{
+				optionsContainer.classList.toggle("active");
+			});
+		optionsList.forEach(o =>
+			{
+				o.addEventListener("click", () =>
+					{
+						selected.innerHTML = o.querySelector("label").innerHTML;
+						optionsContainer.classList.remove("active");
+					});
+			});
+	</script>
+</body>
+</html>
